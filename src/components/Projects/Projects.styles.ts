@@ -50,7 +50,7 @@ export const ContentCardProject = styled(motion.div)`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  background: var(--black-800);
+  background: var(--black-600);
   border-radius: 0.5rem;
   padding: 1.2rem;
   cursor: pointer;
