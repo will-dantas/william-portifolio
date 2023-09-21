@@ -1,9 +1,20 @@
 'use client'
 
-import { Container, Content, CoverDescription, CoverLine, ImageWrapper, CoverStrong, YearExperience, ContatContainer, ContainerBlur, ContentImage } from "./Cover.styles";
 import { HiOutlineMail } from 'react-icons/hi';
 import ImageWilliam from "../../../public/image-william-dantas.png"
 import { container, item, itemImage } from "./Cover.animate";
+import {
+  Container,
+  Content,
+  CoverDescription,
+  CoverLine,
+  ImageWrapper,
+  CoverStrong,
+  YearExperience,
+  ContatContainer,
+  ContainerBlur,
+  ContentImage
+}from "./Cover.styles";
 
 export const Cover = () => {
   const windowScroll = () => {
