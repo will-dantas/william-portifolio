@@ -1,12 +1,17 @@
-import { Poppins, Varela_Round } from "next/font/google";
+import { Varela_Round } from "next/font/google";
 import StyledComponentsRegistry from "./lib/registry";
 import { GlobalStyles } from "@/styles/GlobalStyles";
 import { MenuProvider } from "@/context/MenuContext";
 import { Header } from "@/components/Header/Header";
+import Logo from "../../public/logo-wd.png"
+import Head from "next/head";
 
 export const metadata = {
-  title: "Estadia",
-  description: "Plataforma de reserva de hotéis",
+  title: "William Dantas",
+  description: "Potifólio de William Dantas",
+  icons: {
+    icon: "../../public/logo-wd.png"
+  },
 };
 
 const poppins = Varela_Round({ subsets: ["latin"], weight: "400" });

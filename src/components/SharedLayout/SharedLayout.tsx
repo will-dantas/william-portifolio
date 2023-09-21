@@ -6,7 +6,17 @@ import { motion, AnimatePresence } from "framer-motion";
 import { RiComputerLine } from "react-icons/ri";
 import { VscServerProcess } from "react-icons/vsc";
 import { IoPhonePortraitOutline } from "react-icons/io5";
-import { BarMac, ContainerItems, DivItems, ImageWrapper, Li, Main, Nav, Ul, Window } from "./SharedLayout.styles";
+import {
+  BarMac,
+  ContainerItems,
+  DivItems,
+  ImageWrapper,
+  Li,
+  Main,
+  Nav,
+  Ul,
+  Window
+} from "./SharedLayout.styles";
 
 export const SharedLayout = () => {
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
