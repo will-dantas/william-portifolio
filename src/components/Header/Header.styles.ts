@@ -37,18 +37,12 @@ export const Content = styled.div`
 `;
 
 export const ContentImage = styled.div`
-  img {
-    object-fit: cover;
-    width: 100%;
-    height: 4rem;
-  }
+
 `;
 
 export const ImageWrapper = styled(Image)`
-  img {
-    object-fit: cover;
-    width: 100%;
-    height: 4rem;
-  }
+  object-fit: cover;
+  width: 100%;
+  height: 4rem;
 `;
 
