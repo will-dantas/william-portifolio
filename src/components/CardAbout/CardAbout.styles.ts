@@ -51,9 +51,7 @@ export const CardText = styled.p`
 `;
 
 export const ImageContent = styled.div`
-  position: absolute;
-  top: -5rem;
-  right: -1rem;
+
 
   &[data-type="frontend"] {
     top: -4.2rem;
@@ -70,19 +68,23 @@ export const ImageContent = styled.div`
 `;
 
 export const ImageAbout = styled(Image)`
+  position: absolute;
+  right: -1rem;
+  height: auto;
+
   &[data-type="frontend"] {
-    width: 100%;
-    height: 6.3rem;
+    width: 6rem;
+    top: -4.2rem;
   }
 
   &[data-type="mobile"] {
-    width: 100%;
-    height: 5.7rem;
+    width:5rem;
+    top: -4.2rem;
   }
 
   &[data-type="backend"] {
-    width: 100%;
-    height: 7rem;
+    width: 4.5rem;
+    top: -4.2rem;
   }
 
   filter: drop-shadow(0.35rem 0.35rem 0.8rem rgba(0, 0, 0, 0.5));

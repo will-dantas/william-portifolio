@@ -14,9 +14,7 @@ export const CardAbout = ({ title, image, text, type }: ICardAbout) => {
     <CardAboutContainer variants={item}>
       <HeaderCard>
         <CardTitle>{title}</CardTitle>
-        <ImageContent data-type={type}>
-          <ImageAbout data-type={type} src={image} alt="" />
-        </ImageContent>
+        <ImageAbout data-type={type} src={image} alt="" />
       </HeaderCard>
       <CardText>{text}</CardText>
     </CardAboutContainer>
