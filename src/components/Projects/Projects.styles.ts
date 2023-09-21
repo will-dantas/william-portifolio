@@ -5,7 +5,7 @@ import Image from "next/image";
 import { styled } from "styled-components";
 
 export const Container = styled.section`
-  background: var(--black-700);
+  background: var(--black-800);
   display: flex;
   justify-content: center;
   height: 6rem;

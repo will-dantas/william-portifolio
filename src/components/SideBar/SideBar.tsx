@@ -9,7 +9,6 @@ export const SideBar = ({ open }: SideBarProps) => {
     <Ul open={open}>
       <AnchorItem text="Sobre" windowLocation="about" />
       <AnchorItem text="Experiência" windowLocation="experience" />
-      <AnchorItem text="Soft Skills" windowLocation="soft-skills" />
       <AnchorItem text="Hard Skills" windowLocation="hard-skills" />
       <AnchorItem text="Projetos" windowLocation="projects" />
       <AnchorItem text="Contato" windowLocation="contact" />
