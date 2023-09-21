@@ -17,9 +17,11 @@ import { Toaster, toast } from "react-hot-toast";
 import { useState } from "react";
 
 export const EmailContact = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [form, setForm] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
 
   const item = {
     hidden: { y: 20, opacity: 0 },
@@ -29,17 +31,22 @@ export const EmailContact = () => {
     }
   };
 
-  console.log(process.env.SERVICE_ID_EMAIL!)
   const sendEmail = async (e: any) => {
     e.preventDefault();
-       
+    
     try {
       await emailjs.sendForm(
-        process.env.SERVICE_ID_EMAIL!,
-        process.env.TEMPLATE_ID_EMAIL!,
+        process.env.NEXT_PUBLIC_SERVICE_ID_EMAIL!,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID_EMAIL!,
         e.target,
-        process.env.USER_ID_EMAIL!
+        process.env.NEXT_PUBLIC_USER_ID_EMAIL!
       );
+
+      setForm({
+        name: '',
+        email: '',
+        message: ''
+      })
 
       toast.success(
         'Mensagem enviada com sucesso!',
@@ -52,7 +59,7 @@ export const EmailContact = () => {
       );
     } catch (error: any) {
       toast.error(
-        'Tivemos um problema ao enviar sua mensagem tente novamente em instantes...',
+        'Tivemos um problema ao enviar sua mensagem tente novamente em instantes!',
         {
           duration: 3000,
           style: {
@@ -64,7 +71,7 @@ export const EmailContact = () => {
   }
 
   const validate = () => {
-    return (name && email && message) === '';
+    return (form.name && form.email && form.message) === '';
   };
 
   return (
@@ -77,7 +84,8 @@ export const EmailContact = () => {
             type="text"
             name="user_name"
             placeholder="Nome completo"
-            onChange={(e: any) => setName(e.target.value)}
+            value={form.name}
+            onChange={(e: any) => setForm({...form,  name: e.target.value})}
           />
         </InputContent>
 
@@ -87,7 +95,8 @@ export const EmailContact = () => {
             type="email"
             name="user_email"
             placeholder="Seu melhor email"
-            onChange={(e: any) => setEmail(e.target.value)}
+            value={form.email}
+            onChange={(e: any) => setForm({...form,  email: e.target.value})}
           />
         </InputContent>
 
@@ -96,7 +105,8 @@ export const EmailContact = () => {
           <TextArea
             name="message"
             placeholder="Escreva sua mensagem aqui"
-            onChange={(e: any) => setMessage(e.target.value)}
+            value={form.message}
+            onChange={(e: any) => setForm({...form,  message: e.target.value})}
           />
         </InputContent>
 
