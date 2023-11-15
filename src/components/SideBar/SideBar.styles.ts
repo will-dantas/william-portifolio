@@ -7,7 +7,8 @@ export const Ul = styled.ul<SideBarProps>`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1.2rem;
+  margin-left: auto;
+  margin-right: auto;
   gap: 1rem;
 
   @media (max-width: 768px) {

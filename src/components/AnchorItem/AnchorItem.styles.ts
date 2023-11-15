@@ -42,7 +42,7 @@ export const Container = styled.li`
   }
 
   @media (max-width: 768px) {
-    margin: .8rem 0 .8rem 0;
+    margin: 1.3rem 1.3rem 1.3rem 1.3rem;
     padding: 1rem;
     background: var(--black-600);
 
