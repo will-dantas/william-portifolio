@@ -23,7 +23,7 @@ export const Ul = styled.ul<SideBarProps>`
     top: ${({ open }) => open ? '-56px' : '-56px'};
     left: 0;
     height: auto;
-    width: 100%;
+    width: auto;
     opacity: ${({ open }) => open ? '1' : '0'};
     visibility: ${({ open }) => open ? 'visible' : 'hidden'};
     transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
