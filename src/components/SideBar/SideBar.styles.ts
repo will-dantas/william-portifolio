@@ -9,18 +9,18 @@ export const Ul = styled.ul<SideBarProps>`
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-  gap: 1rem;
 
   @media (max-width: 768px) {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background: var(--black-700);
-    padding-top: 1rem;
-    padding-left: 1.8rem;
-    padding-right: 1.8rem;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
     position: fixed;
-    top: 5rem;
+    top: 6rem;
     left: 0;
-    height: 100vh;
     width: 16rem;
     transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
     transition: transform 0.3s ease-in-out;
