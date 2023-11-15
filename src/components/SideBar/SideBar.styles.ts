@@ -21,7 +21,7 @@ export const Ul = styled.ul<SideBarProps>`
     position: fixed;
     margin-top: 8rem;
     top: ${({ open }) => open ? '-56px' : '-56px'};
-    left: 0;
+    right: 0;
     height: auto;
     width: auto;
     opacity: ${({ open }) => open ? '1' : '0'};
