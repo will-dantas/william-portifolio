@@ -45,7 +45,7 @@ export const Container = styled.li`
 
   @media (max-width: 768px) {
     margin: .8rem 0 .8rem 0;
-    padding: 0.5rem;
+    padding: 1rem;
     width: 100%;
     background: var(--black-600);
 
@@ -55,22 +55,20 @@ export const Container = styled.li`
 
     &:hover {
       background: var(--green-500);
-      padding: 0.5rem;
       color: var(--black-600);
 
       p {
         margin-right: 2rem;
         color: var(--black-600);
         font-weight: 500;
-        transition: 0.3s
+        transition: 0.6s
       }
 
       &::after{
 		    content: none;
 	    }
 
-      transition: 0.4s
-
+      transition: 0.6s
     }
   }
 `;

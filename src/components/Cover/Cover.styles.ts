@@ -38,7 +38,6 @@ export const Content = styled.div`
   @media (max-width: 768px){
     flex-direction: column-reverse;
     padding: 2rem;
-    margin-top: -10rem;
     margin-bottom: 0rem;
   }
 `;
