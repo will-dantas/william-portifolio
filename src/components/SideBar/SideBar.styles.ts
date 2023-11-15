@@ -3,24 +3,17 @@
 import { styled } from "styled-components";
 import { SideBarProps } from "./SideBar.interface";
 
-
 export const Ul = styled.ul<SideBarProps>`
-   display: flex;
-   justify-content: center;
-   gap: 1rem;
-
-  li:last-child {
-    background: var(--green-500);
-    color: var(--black-700);
-    font-weight: 600;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.2rem;
+  gap: 1rem;
 
   @media (max-width: 768px) {
     display: block;
     background: var(--black-700);
     padding-top: 1rem;
-    padding-left: 1.8rem;
-    padding-right: 1.8rem;
     padding-bottom: 0.6rem;
     border-bottom-left-radius: 0.6rem;
     border-bottom-right-radius: 0.6rem;
