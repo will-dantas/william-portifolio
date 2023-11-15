@@ -3,18 +3,14 @@
 import styled from 'styled-components';
 import Image from 'next/image';
 
-export const Container = styled.header`
+export const Container = styled.div`
   display: flex;
-  justify-content: space-around;
-  height: 5rem;
-  align-items: center;
-  position: sticky;
   width: 100%;
-  top: 0;
-  background: var(--gray-700);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(10.6px);
-  -webkit-backdrop-filter: blur(10.6px);
+  justify-content: center;
+  align-items: center;
+  padding: 1.2rem;
+  position: fixed;
+  top: 0.9;
   z-index: 999;
 
   @media (max-width: 768px){
@@ -29,6 +25,12 @@ export const Content = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0.43rem 1.5rem 0.43rem 1.5rem;
+  border-radius: 0.6rem;
+  background: var(--gray-700);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10.6px);
+  -webkit-backdrop-filter: blur(10.6px);
 
   @media (max-width: 768px){
     padding-left: 1rem;
