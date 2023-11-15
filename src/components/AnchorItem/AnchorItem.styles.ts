@@ -6,8 +6,6 @@ export const Container = styled.li`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
   text-decoration: none;
   color: var(--shape);
   border-radius: 0.5rem;
@@ -46,7 +44,6 @@ export const Container = styled.li`
   @media (max-width: 768px) {
     margin: .8rem 0 .8rem 0;
     padding: 1rem;
-    width: 100%;
     background: var(--black-600);
 
     > svg {

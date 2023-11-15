@@ -7,6 +7,7 @@ import { SideBarProps } from "./SideBar.interface";
 export const Ul = styled.ul<SideBarProps>`
    display: flex;
    justify-content: center;
+   gap: 1rem;
 
   li:last-child {
     background: var(--green-500);
