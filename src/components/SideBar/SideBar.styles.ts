@@ -12,14 +12,14 @@ export const Ul = styled.ul<SideBarProps>`
     display: block;
     background: var(--black-700);
     padding-top: 1rem;
-    padding-left: 1.8rem;
-    padding-right: 1.8rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     position: fixed;
     top: 5rem;
-    left: 0;
-    height: 100vh;
+    left: 2rem;
+    height: auto;
     width: 16rem;
-    transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
+    transform: ${({ open }) => open ? 'translateY(-100%)' : 'translateY(0)'};
     transition: transform 0.3s ease-in-out;
     z-index: -1;
   }
