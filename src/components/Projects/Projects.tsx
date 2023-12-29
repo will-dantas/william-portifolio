@@ -18,7 +18,6 @@ import {
   Content,
   ContentCardProject,
   HeaderModalProject,
-  TitleProject,
   ImageProjects,
   Overlay,
   DescriptionProject,
@@ -29,7 +28,9 @@ import {
   TitleProjects,
   HeaderProject,
   ContentButtonMore,
-  AncorButton
+  AncorButton,
+  DatailsProject,
+  ContentDetails
 } from "./Projects.styles";
 
 
@@ -68,15 +69,20 @@ export const Projects = () => {
               onClick={() => setSelectedId(item.id as any)}
             >
               <ImageProjects src={item.image} alt={item.title} />
-              <TitleProject>
-                <motion.h3>{item.title}</motion.h3>
-                <div>
-                  <IoLogoJavascript />
-                  <TbBrandTypescript />
-                  <FaReact />
-                  <FaNodeJs />
-                </div>
-              </TitleProject>
+              <DatailsProject>
+                <ContentDetails>
+                  <motion.h3>{item.title}</motion.h3>
+                  <div>
+                    <IoLogoJavascript />
+                    <TbBrandTypescript />
+                    <FaReact />
+                    <FaNodeJs />
+                  </div>
+                </ContentDetails>
+                <AncorButton href={item.link} target="_blank">
+                  Acesse
+                </AncorButton>
+              </DatailsProject>
             </ContentCardProject>
           ))}
         </ContainerCardProject>
@@ -88,9 +94,9 @@ export const Projects = () => {
                   <ButtonClose onClick={() => setSelectedId(null)}><MdClose /></ButtonClose>
                 </HeaderModalProject>
                 <ImageProjects src={projectData[parseInt(selectedId, 10)].image} alt={projectData[parseInt(selectedId, 10)].title} />
-                <TitleProject>
+                <DatailsProject>
                   <motion.h3>{projectData[parseInt(selectedId, 10)].title}</motion.h3>
-                </TitleProject>
+                </DatailsProject>
                 <ContainerDescriptionProject>
                   <DescriptionProject>
                     {projectData[parseInt(selectedId, 10)].description}
