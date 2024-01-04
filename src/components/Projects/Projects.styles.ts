@@ -5,7 +5,6 @@ import Image from "next/image";
 import { styled } from "styled-components";
 
 export const Container = styled.section`
-  background: var(--black-800);
   display: flex;
   justify-content: center;
   height: 6rem;
@@ -50,63 +49,10 @@ export const ContentCardProject = styled(motion.div)`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  background: var(--black-600);
+  background: var(--black-700);
   border-radius: 1rem;
   padding: 0.3rem 0.3rem 0 0.3rem ;
-  cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-`;
-
-
-export const Overlay = styled.div`
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  left: 0px;
-  top: 0px;
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(4.5px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  z-index: 999;
-`;
-
-export const ContainerModalProject = styled(motion.div)`
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  max-width: 470px;
-  background: var(--black-800);
-  justify-content: space-between;
-  border-radius: 0.5rem;
-  padding: 1.2rem;
-  position: relative;
-  box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
-  0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
-  0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
-`;
-
-export const HeaderModalProject = styled.div`
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-`;
-
-export const ButtonClose = styled(motion.button)`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.2rem;
-  border-radius: 2rem;
-  border: none;
-  background-color: var(--gray-400);
-
-  svg {
-    color: var(--green-500);
-    font-size: 1.2rem;
-  }
 `;
 
 export const ImageProjects = styled(Image)`
@@ -130,7 +76,6 @@ export const Datails = styled.div`
   }
 `;
 
-
 export const DatailsProject = styled(motion.div)`
   display: flex;
   justify-content: space-between;
@@ -145,7 +90,6 @@ export const DatailsProject = styled(motion.div)`
   }
 `;
 
-
 export const ContentDetails = styled(motion.div)`
   display: flex;
   justify-content: start;
@@ -153,49 +97,6 @@ export const ContentDetails = styled(motion.div)`
   align-items: start;
 `;
 
-export const ContainerDescriptionProject = styled.div`
-  overflow: auto;
-
-  &::-webkit-scrollbar {
-    height: 5px;
-    width: 5px;
-    background: var(--black-600);
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: var(--gray-400);
-    -webkit-border-radius: 1ex;
-  }
-
-  &::-webkit-scrollbar-corner {
-    background: var(--black-600);
-  }
-`;
-
-export const DescriptionProject = styled(motion.p)`
-  display: flex;
-  text-align: justify;
-  font-size: 1rem;
-  color: var(--text-body);
-`;
-
-export const TecsProject = styled(motion.p)`
-  text-align: start;
-  font-size: 0.8rem;
-  color: var(--text-body);
-  margin-top: 0.3rem;
-`;
-
-export const Strong = styled.strong`
-  color: white;
-  margin-right: 0.3rem;
-`;
-
-export const Divider = styled.hr`
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  border-top: 1px solid var(--gray-300);
-`;
 export const AncorButton = styled.a`
   display: flex;
   justify-content: center;

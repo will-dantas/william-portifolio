@@ -7,7 +7,7 @@ export const ContentCardDetail = styled(motion.div)`
   justify-content: center;
   align-items: center;
   width: 100%;
-  background: var(--gray-700);
+  background: var(--black-700);
   border-radius: 1rem;
   padding: 0.3rem 0.3rem 0 0.3rem ;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;

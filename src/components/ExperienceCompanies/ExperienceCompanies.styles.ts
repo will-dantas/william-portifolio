@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-  background: var(--black-800);
   display: flex;
   justify-content: center;
   height: 6rem;

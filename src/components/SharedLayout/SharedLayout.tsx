@@ -35,6 +35,7 @@ export const SharedLayout = () => {
               key={index}
               selected={item === selectedTab ? true : false}
               onClick={() => setSelectedTab(item)}
+              data-color={item.name}
             >
               {item.icon === '1' ? <RiComputerLine /> :
                 item.icon === '2' ? <IoPhonePortraitOutline /> :

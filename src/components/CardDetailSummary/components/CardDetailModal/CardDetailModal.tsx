@@ -2,6 +2,7 @@ import { MdClose } from "react-icons/md";
 import { ButtonClose, Company, ContainerModalDetail, ContentColor, Datails, HeaderModalDetail, Position, Skills, TimeLine } from "./CardDetailModal.styles";
 import { experienceCompaniesData } from "@/components/ExperienceCompanies/ExperienceCompanies.data";
 import { IExperienceCompaniesData } from "@/components/ExperienceCompanies/ExperienceCompanies.interface";
+import { useState } from "react";
 
 interface ICardDetailModal {
   selectId: string

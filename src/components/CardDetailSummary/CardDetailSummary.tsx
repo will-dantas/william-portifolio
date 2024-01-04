@@ -36,7 +36,13 @@ export const CardDetailSummary = ({ data }: ICardDatailSummary) => {
         initial="hidden"
         variants={containerAnimationExperience}
       >
-        {data.map((item) => <CardDetailComponent item={item} selectedId={handleSelectId} key={item.id}/>)}
+        {data.map((item) =>
+          <CardDetailComponent
+            key={item.id}
+            item={item}
+            selectedId={() => handleSelectId(item.id)}
+          />)
+        }
       </ContainerCardDetail >
       <AnimatePresence>
         {selectedId && (

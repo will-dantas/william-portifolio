@@ -4,7 +4,6 @@ import Image from "next/image";
 import { styled } from "styled-components";
 
 export const Container = styled.section`
-   background: var(--black-700);
   display: flex;
   justify-content: center;
   height: 6rem;

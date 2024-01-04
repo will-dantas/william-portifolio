@@ -74,11 +74,11 @@ export const About = () => {
             Olá! Sou William Dantas
           </SalutationAbout>
           <DescriptionAbout>
-          Com mais de 3 anos anos de experiência como Desenvolvedor de Software FullStack,
-          trago uma trajetória diversificada e repleta de realizações. Durante minha carreira,
-          tive o privilégio de trabalhar em diferentes contextos e projetos desafiadores,
-          o que me permitiu aprimorar minhas habilidades e contribuir significativamente
-          para o sucesso das equipes e organizações com as quais colaborei.
+            Com mais de 3 anos anos de experiência como Desenvolvedor de Software FullStack,
+            trago uma trajetória diversificada e repleta de realizações. Durante minha carreira,
+            tive o privilégio de trabalhar em diferentes contextos e projetos desafiadores,
+            o que me permitiu aprimorar minhas habilidades e contribuir significativamente
+            para o sucesso das equipes e organizações com as quais colaborei.
           </DescriptionAbout>
         </ContainerAbout>
       </Content>

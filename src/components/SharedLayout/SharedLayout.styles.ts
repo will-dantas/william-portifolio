@@ -122,13 +122,16 @@ export const Li = styled.ul<ListPros>`
     bottom: -1px;
     left: 0;
     right: 0;
-    height: 2px;
-    background: var(--green-500);
+    height: 4px;
+    background: var(--blue-700);
   }
 
   svg {
-    font-size: 1.2rem;
-    color: var(--green-500);
+    font-size: 1.6rem;
+    background: var(--blue-200);
+    padding: 0.2rem;
+    border-radius: 1rem;
+    color: var(--blue-700);
   }
 
   @media (max-width: 768px) {

@@ -1,8 +1,7 @@
 'use client'
 
-import { useEffect, useState } from "react";
-import { AnimatePresence, motion, useAnimation } from "framer-motion";
-import { MdClose } from "react-icons/md";
+import { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
 import { TbBrandTypescript } from "react-icons/tb";
 import { FaReact, FaNodeJs } from "react-icons/fa";
 import { HiCode } from "react-icons/hi";
@@ -11,20 +10,11 @@ import { container, itemAnimation } from "./Projects.animations";
 import { IoLogoJavascript } from "react-icons/io5";
 import { projectData } from "./Projects.data";
 import {
-  ButtonClose,
   Container,
   ContainerCardProject,
-  ContainerModalProject,
   Content,
   ContentCardProject,
-  HeaderModalProject,
   ImageProjects,
-  Overlay,
-  DescriptionProject,
-  TecsProject,
-  Strong,
-  ContainerDescriptionProject,
-  Divider,
   TitleProjects,
   HeaderProject,
   ContentButtonMore,
@@ -33,9 +23,7 @@ import {
   ContentDetails
 } from "./Projects.styles";
 
-
 export const Projects = () => {
-  const [selectedId, setSelectedId] = useState(null);
   const controls = useAnimation();
   const [ref, inView] = useInView();
 
@@ -66,7 +54,6 @@ export const Projects = () => {
               key={item.id}
               variants={itemAnimation}
               layoutId={index.toString()}
-              onClick={() => setSelectedId(item.id as any)}
             >
               <ImageProjects src={item.image} alt={item.title} />
               <DatailsProject>
@@ -86,33 +73,6 @@ export const Projects = () => {
             </ContentCardProject>
           ))}
         </ContainerCardProject>
-        <AnimatePresence>
-          {selectedId && (
-            <Overlay>
-              <ContainerModalProject layoutId={selectedId}>
-                <HeaderModalProject>
-                  <ButtonClose onClick={() => setSelectedId(null)}><MdClose /></ButtonClose>
-                </HeaderModalProject>
-                <ImageProjects src={projectData[parseInt(selectedId, 10)].image} alt={projectData[parseInt(selectedId, 10)].title} />
-                <DatailsProject>
-                  <motion.h3>{projectData[parseInt(selectedId, 10)].title}</motion.h3>
-                </DatailsProject>
-                <ContainerDescriptionProject>
-                  <DescriptionProject>
-                    {projectData[parseInt(selectedId, 10)].description}
-                  </DescriptionProject>
-                  <Divider />
-                  <TecsProject>
-                    <Strong>Tecnologias usadas:</Strong> {projectData[parseInt(selectedId, 10)].tecs}
-                  </TecsProject>
-                </ContainerDescriptionProject>
-                <AncorButton href={projectData[parseInt(selectedId, 10)].link} target="_blank">
-                    Acesse
-                </AncorButton>
-              </ContainerModalProject>
-            </Overlay>
-          )}
-        </AnimatePresence>
         <ContentButtonMore>
           <AncorButton href='https://github.com/will-dantas?tab=repositories' target="_blank">
             <HiCode /> Mais projetos

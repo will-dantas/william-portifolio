@@ -6,7 +6,7 @@ import { Container, Content, HeaderExperienceCompanies, TitleExperienceCompanies
 
 export const ExperienceCompanies = () => {
   return (
-    <Container id="experience-companies">
+    <Container id="experience">
       <Content>
         <HeaderExperienceCompanies>
           <HiCode />
