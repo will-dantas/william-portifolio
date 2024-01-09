@@ -29,11 +29,11 @@ export const Container = styled.li`
 	}
 
   &:hover{
-    color: var(--green-500);
+    color: var(--blue-200);
     transition: 0.6s;
 
 		&::after{
-		  background: var(--green-500);
+		  background: var(--blue-700);
 		  width: 83%;
 		}
 	}
@@ -53,7 +53,7 @@ export const Container = styled.li`
     }
 
     &:hover {
-      background: var(--green-500);
+      background: var(--blue-700);
       padding: 1rem;
       color: var(--black-600);
 

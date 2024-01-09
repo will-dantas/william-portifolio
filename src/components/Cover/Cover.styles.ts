@@ -59,8 +59,9 @@ export const Paragraph = styled.p`
 `;
 
 export const CoverLine = styled(motion.h1)`
+  font-family: 'Inter', sans-serif;
   color: #fff;
-  font-weight: 400;
+  font-weight: 900;
   font-size: 3rem;
   opacity: 0.9;
 

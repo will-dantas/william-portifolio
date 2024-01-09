@@ -50,7 +50,7 @@ export const ContentColor = styled.div`
   }
 
   &[data-color="second"] {
-    background: var(--orange-700);
+    background: var(--purple-100);
   }
 
   &[data-color="first"] {

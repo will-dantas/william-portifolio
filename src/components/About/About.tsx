@@ -5,11 +5,13 @@ import { CardAbout } from "../../components/CardAbout/CardAbout";
 import { useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-import { characterAnimation, container } from "./About.animations";
+import { container } from "./About.animations";
 import ImageMacbook from "../../../public/frontend.png"
 import ImageIphone from "../../../public/mobile.png"
 import Backend from "../../../public/backend.png"
+import ImageWilliam from "../../../public/image-william-dantas.png"
 import {
+  CardResumeInfo,
   CardsContainer,
   Container,
   ContainerAbout,
@@ -19,6 +21,8 @@ import {
   SalutationAbout,
   TitleAbout
 } from "./About.styles";
+import { CardContact } from "../CardContact/CardContact";
+import { ImageCard } from "../CardContact/CardContact.styles";
 
 export const About = () => {
   const controls = useAnimation();
@@ -39,7 +43,15 @@ export const About = () => {
           initial="hidden"
           variants={container}
         >
-          <CardAbout
+          <ImageCard
+            src={ImageWilliam}
+            alt="imagem de william dantas com suas principais tecnologias"
+          />
+          <CardResumeInfo>
+
+          </CardResumeInfo>
+        </CardsContainer>
+        {/* <CardAbout
             type="frontend"
             title="Front End"
             image={ImageMacbook}
@@ -56,13 +68,12 @@ export const About = () => {
             title="Back End"
             image={Backend}
             text="Node.Js, SQL, NoSQL, Express, Nest.Js, CI/CD.."
-          />
-        </CardsContainer>
+          /> */}
         <ContainerAbout
           ref={ref}
           animate={controls}
           initial="hidden"
-          variants={characterAnimation}
+          variants={container}
         >
           <HeaderAbout>
             <HiCode />

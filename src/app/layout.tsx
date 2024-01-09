@@ -1,4 +1,4 @@
-import { Noto_Sans } from "next/font/google";
+import { Inter } from "next/font/google";
 import StyledComponentsRegistry from "./lib/registry";
 import { GlobalStyles } from "@/styles/GlobalStyles";
 import { MenuProvider } from "@/context/MenuContext";
@@ -14,7 +14,7 @@ export const metadata = {
   },
 };
 
-const poppins = Noto_Sans({ subsets: ["latin"], weight: "400" });
+const poppins = Inter({ subsets: ["latin"], weight: "400" });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

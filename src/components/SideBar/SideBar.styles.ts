@@ -11,10 +11,19 @@ export const Ul = styled.ul<SideBarProps>`
   margin-right: auto;
 
   li:last-child {
-    background: var(--green-500);
-    color: black;
+    background: var(--blue-700);
     font-weight: 600;
     padding: 1rem;
+
+    &:hover {
+      background: var(--blue-200);
+      color: var(--blue-700);
+      transform: scale(0.2rem);
+    }
+
+    &::after{
+		  background: none;
+		}
   }
 
   @media (max-width: 768px) {

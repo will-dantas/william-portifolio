@@ -9,6 +9,7 @@ export const Container = styled.section`
   height: 6rem;
   align-items: center;
   height: 100vh;
+  background: var(--blue-700);
 
   @media (max-width: 768px) {
     height: auto;
@@ -21,20 +22,45 @@ export const Content = styled.div`
   max-width: 1216px;
   display: flex;
   align-items: center;
-  border-radius: 1rem;
-  justify-content: space-between;
-  background: var(--blue-700);
+  justify-content: center;
+  flex-direction: row;
+  gap: 2rem;
   padding: 2rem;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
   @media (max-width: 768px) {
-    flex-direction: column-reverse;
-    padding: 2rem;
+    flex-direction: column;
   }
 `;
 
 export const CardsContainer = styled(motion.div)`
+  border-radius: 1rem;
+  background: var(--blue-200);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 4rem;
+  position: relative;
+`;
 
+export const CardResumeInfo = styled(motion.div)`
+  background: var(--black-800);
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1rem;
+  position: absolute;
+  bottom: -1rem;
+  left: -1rem;
+`;
+
+export const titleResumeInfo = styled.h3`
+  background: var(--black-800);
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1rem;
+  position: absolute;
+  bottom: -1rem;
+  left: -1rem;
 `;
 
 export const ContainerAbout = styled(motion.div)`
@@ -69,18 +95,14 @@ export const TitleAbout = styled.h1`
 `;
 
 export const SalutationAbout = styled.h2`
-  color: white;
-  font-weight: 300;
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  color: var(--shape);
 `;
 
 export const DescriptionAbout = styled(motion.p)`
-  font-size: 1.2rem;
   text-align: justify;
+  font-size: 1.2rem;
   line-height: 1.8rem;
-  color: var(--shape);
 
   @media (max-width: 768px) {
     font-size: 1rem;
