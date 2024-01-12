@@ -1,28 +1,26 @@
 'use client'
 
 import { HiCode } from "react-icons/hi";
-import { CardAbout } from "../../components/CardAbout/CardAbout";
 import { useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { container } from "./About.animations";
-import ImageMacbook from "../../../public/frontend.png"
-import ImageIphone from "../../../public/mobile.png"
-import Backend from "../../../public/backend.png"
-import ImageWilliam from "../../../public/image-william-dantas.png"
+import ImageWilliam from "../../../public/william_image.png"
 import {
+  CardColor,
   CardResumeInfo,
   CardsContainer,
   Container,
   ContainerAbout,
+  ContainerCards,
   Content,
   DescriptionAbout,
   HeaderAbout,
+  ImageCard,
   SalutationAbout,
-  TitleAbout
+  TitleAbout,
+  TitleResumeInfo
 } from "./About.styles";
-import { CardContact } from "../CardContact/CardContact";
-import { ImageCard } from "../CardContact/CardContact.styles";
 
 export const About = () => {
   const controls = useAnimation();
@@ -47,8 +45,30 @@ export const About = () => {
             src={ImageWilliam}
             alt="imagem de william dantas com suas principais tecnologias"
           />
-          <CardResumeInfo>
-
+          <CardResumeInfo
+            ref={ref}
+            animate={controls}
+            initial="hidden"
+            variants={container}
+          >
+            <TitleResumeInfo>Informações</TitleResumeInfo>
+            <ContainerCards>
+              <CardColor data-color="one">
+                <HiCode />
+                <p>+3</p>
+                <small>anos</small>
+              </CardColor>
+              <CardColor data-color="two">
+                <HiCode />
+                <p>Full</p>
+                <small>Stack</small>
+              </CardColor>
+              <CardColor data-color="three">
+                <HiCode />
+                <p>+15</p>
+                <small>projetos</small>
+              </CardColor>
+            </ContainerCards>
           </CardResumeInfo>
         </CardsContainer>
         {/* <CardAbout

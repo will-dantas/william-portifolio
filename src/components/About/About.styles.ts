@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { styled } from "styled-components";
 
 export const Container = styled.section`
@@ -39,28 +40,82 @@ export const CardsContainer = styled(motion.div)`
   justify-content: center;
   align-items: center;
   height: 100%;
-  padding: 4rem;
+  padding: 3rem;
   position: relative;
 `;
 
-export const CardResumeInfo = styled(motion.div)`
-  background: var(--black-800);
-  width: 4rem;
-  height: 4rem;
-  border-radius: 1rem;
-  position: absolute;
-  bottom: -1rem;
-  left: -1rem;
+export const ImageCard = styled(Image)`
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  max-width: 250px;
+  border-radius: 12rem;
+  border: 4px solid white;
+  background: var(--blue-700);
 `;
 
-export const titleResumeInfo = styled.h3`
+
+export const CardResumeInfo = styled(motion.div)`
   background: var(--black-800);
-  width: 4rem;
-  height: 4rem;
   border-radius: 1rem;
   position: absolute;
-  bottom: -1rem;
-  left: -1rem;
+  padding: 1rem;
+  bottom: -2rem;
+  left: -2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+
+  @media (max-width: 768px) {
+    bottom: -3rem;
+    left: -1rem;
+  }
+`;
+
+export const TitleResumeInfo = styled.p`
+  font-size: 0.8rem;
+  font-weight: 600;
+`;
+
+export const ContainerCards = styled.div`
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  gap: 0.4rem;
+  flex: 1;
+
+  p {
+    margin-top: 0.6rem;
+    font-weight: 900;
+
+  }
+
+  small {
+    font-size: 0.6rem;
+  }
+`;
+
+export const CardColor = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem 0.4rem 0.8rem 0.4rem;
+  background: var(--red-700);
+  border-radius: 0.5rem;
+  width: 3rem;
+
+  &[data-color="one"] {
+    background: var(--blue-700);
+  }
+
+  &[data-color="two"] {
+    background: var(--purple-700);
+  }
+
+  &[data-color="three"] {
+    background: var(--red-700);
+  }
 `;
 
 export const ContainerAbout = styled(motion.div)`
