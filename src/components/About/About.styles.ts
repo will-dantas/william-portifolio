@@ -38,17 +38,23 @@ export const CardsContainer = styled(motion.div)`
   background: var(--blue-200);
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
   align-items: center;
   height: 100%;
-  padding: 3rem;
-  position: relative;
+  padding: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const ImageCard = styled(Image)`
   object-fit: cover;
   width: 100%;
   height: auto;
-  max-width: 250px;
+  max-width: 220px;
   border-radius: 12rem;
   border: 4px solid white;
   background: var(--blue-700);
@@ -56,20 +62,10 @@ export const ImageCard = styled(Image)`
 
 
 export const CardResumeInfo = styled(motion.div)`
-  background: var(--black-800);
-  border-radius: 1rem;
-  position: absolute;
-  padding: 1rem;
-  bottom: -2rem;
-  left: -2rem;
   display: flex;
   flex-direction: column;
-  gap: 1.4rem;
-
-  @media (max-width: 768px) {
-    bottom: -3rem;
-    left: -1rem;
-  }
+  gap: 2rem;
+  border-radius: 1rem;
 `;
 
 export const TitleResumeInfo = styled.p`
@@ -81,13 +77,12 @@ export const ContainerCards = styled.div`
   display: flex;
   justify-content: space-around;
   flex-direction: row;
-  gap: 0.4rem;
+  gap: 1rem;
   flex: 1;
 
   p {
     margin-top: 0.6rem;
     font-weight: 900;
-
   }
 
   small {
@@ -100,8 +95,7 @@ export const CardColor = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0.8rem 0.4rem 0.8rem 0.4rem;
-  background: var(--red-700);
+  padding: 0.8rem 1.8rem 0.8rem 1.8rem;
   border-radius: 0.5rem;
   width: 3rem;
 
@@ -129,24 +123,6 @@ export const ContainerAbout = styled(motion.div)`
     width: 100%;
     margin-bottom: 2rem;
   }
-`;
-
-export const HeaderAbout = styled.div`
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  margin-bottom: 2rem;
-
-  svg {
-    margin-right: 1rem;
-    color: var(--green-500);
-  }
-`;
-
-export const TitleAbout = styled.h1`
-  color: var(--text-body);
-  font-size: 1rem;
-  font-weight: 400;
 `;
 
 export const SalutationAbout = styled.h2`

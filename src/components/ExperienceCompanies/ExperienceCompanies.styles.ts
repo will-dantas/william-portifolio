@@ -16,7 +16,6 @@ export const Container = styled.section`
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 2rem;
   max-width: 1216px;
 
   @media (max-width: 768px) {
@@ -37,7 +36,6 @@ export const HeaderExperienceCompanies = styled.div`
 `;
 
 export const TitleExperienceCompanies = styled.h1`
-  color: var(--text-body);
   font-size: 1rem;
-  font-weight: 400;
+  margin-bottom: 2rem;
 `;

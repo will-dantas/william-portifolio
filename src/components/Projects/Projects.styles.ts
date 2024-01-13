@@ -19,13 +19,16 @@ export const Container = styled.section`
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 2rem;
   max-width: 1216px;
 
   @media (max-width: 768px) {
     flex-direction: column;
     padding: 4rem 2rem 4rem 2rem;
   }
+`;
+
+export const Title = styled.h3`
+  margin-bottom: 2rem;
 `;
 
 export const ContainerCardProject = styled(motion.div)`

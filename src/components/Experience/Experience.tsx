@@ -1,24 +1,18 @@
 'use client'
 
-import { HiCode } from "react-icons/hi";
-import Formation from "../../../public/capelo.svg";
 import { useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import { container, item } from "./Experience.animations";
 import {
   Container,
-  ConteinerTimeLine,
   Content,
-  ContentCardsTimeLine,
-  ContentInformation,
-  Ctimeline,
-  HeaderExperience,
-  ImageWrapper
+  ContentCardsTimeLine
 } from "./Experience.styles";
 import logoUFRN from '../../../public/brasao_ufrn.svg';
 import logoUFRNRed from '../../../public/brasao_ufrn_red.svg';
 import Image from "next/image";
+import { TitleSection } from "../TitleSection/TitleSection";
 
 export const Experience = () => {
   const controls = useAnimation();
@@ -38,12 +32,7 @@ export const Experience = () => {
         initial="hidden"
         variants={container}
       >
-        <HeaderExperience>
-          <HiCode />
-          <h1>
-            Formação
-          </h1>
-        </HeaderExperience>
+        <TitleSection title="Formação"/>
         <ContentCardsTimeLine variants={item} data-color="red">
           <div>
             <h2>Bacharelado em Ciências & Tecnologia</h2>

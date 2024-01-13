@@ -68,7 +68,7 @@ export const GlobalStyles = createGlobalStyle`
     font-weight: 900;
   }
 
-  p {
+  p, textarea {
     font-family: "Inter var", Inter, "Helvetica Neue", Arial, sans-serif;
     font-weight: 400;
     font-style: normal;

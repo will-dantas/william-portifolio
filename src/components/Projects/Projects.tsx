@@ -20,8 +20,10 @@ import {
   ContentButtonMore,
   AncorButton,
   DatailsProject,
-  ContentDetails
+  ContentDetails,
+  Title
 } from "./Projects.styles";
+import { TitleSection } from "../TitleSection/TitleSection";
 
 export const Projects = () => {
   const controls = useAnimation();
@@ -36,13 +38,8 @@ export const Projects = () => {
   return (
     <Container id="projects">
       <Content>
-        <HeaderProject>
-          <HiCode />
-          <TitleProjects>
-            Projetos
-          </TitleProjects>
-        </HeaderProject>
-        <h1>Alguns dos meus projetos</h1>
+        <TitleSection title="Projetos" />
+        <Title>Alguns dos meus projetos</Title>
         <ContainerCardProject
           ref={ref}
           animate={controls}

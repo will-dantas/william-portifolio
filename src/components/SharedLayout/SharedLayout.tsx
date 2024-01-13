@@ -61,7 +61,7 @@ export const SharedLayout = () => {
                 transition={{ duration: 0.2 }}
               >
                 <ImageWrapper src={item.iconItem} alt={`Logo do ${item.nameItem}`} />
-                <h1>{item.nameItem}</h1>
+                <h3>{item.nameItem}</h3>
               </DivItems>
             ))}
           </AnimatePresence>

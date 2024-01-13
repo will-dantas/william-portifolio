@@ -3,6 +3,7 @@ import { Contact } from "@/components/Contact/Contact";
 import { Cover } from "@/components/Cover/Cover";
 import { Experience } from "@/components/Experience/Experience";
 import { ExperienceCompanies } from "@/components/ExperienceCompanies/ExperienceCompanies";
+import { Footer } from "@/components/Footer/Footer";
 import { HardSkills } from "@/components/HardSkills/HardSkills";
 import { InfiniteCarousel } from "@/components/InfiniteCarousel/InfiniteCarousel";
 import { Projects } from "@/components/Projects/Projects";
@@ -18,6 +19,7 @@ export default function Home() {
       <ExperienceCompanies />
       <Contact />
       <InfiniteCarousel />
+      <Footer />
     </div>
   );
 }

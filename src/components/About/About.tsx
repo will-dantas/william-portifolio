@@ -15,12 +15,10 @@ import {
   ContainerCards,
   Content,
   DescriptionAbout,
-  HeaderAbout,
   ImageCard,
-  SalutationAbout,
-  TitleAbout,
-  TitleResumeInfo
+  SalutationAbout
 } from "./About.styles";
+import { TitleSection } from "../TitleSection/TitleSection";
 
 export const About = () => {
   const controls = useAnimation();
@@ -51,7 +49,6 @@ export const About = () => {
             initial="hidden"
             variants={container}
           >
-            <TitleResumeInfo>Informações</TitleResumeInfo>
             <ContainerCards>
               <CardColor data-color="one">
                 <HiCode />
@@ -95,12 +92,7 @@ export const About = () => {
           initial="hidden"
           variants={container}
         >
-          <HeaderAbout>
-            <HiCode />
-            <TitleAbout>
-              Sobre
-            </TitleAbout>
-          </HeaderAbout>
+          <TitleSection title="Sobre"/>
           <SalutationAbout>
             Olá! Sou William Dantas
           </SalutationAbout>

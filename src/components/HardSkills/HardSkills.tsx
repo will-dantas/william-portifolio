@@ -1,29 +1,21 @@
-import { Container, ContainerImage, Content, ContentImage, HeaderHardSkills, ImageWrapper, Inner, TitleHardSkills, Wrapper } from "./HardSkills.styles";
+'use client'
 
-import { HiCode } from "react-icons/hi";
-import WilliamDev from "../../../public/vscode.png"
 import { SharedLayout } from "../SharedLayout/SharedLayout";
+import { TitleSection } from "../TitleSection/TitleSection";
+import {
+  Container,
+  Content,
+  ContentInfo
+} from "./HardSkills.styles";
 
 export const HardSkills = () => {
   return (
     <Container id="hard-skills">
       <Content>
-        <ContainerImage>
-          <HeaderHardSkills>
-            <HiCode />
-            <TitleHardSkills>
-              Hard Skills
-            </TitleHardSkills>
-          </HeaderHardSkills>
-          <ContentImage>
-            <Wrapper>
-              <Inner>
-                  <ImageWrapper src={WilliamDev} alt="" />
-              </Inner>
-            </Wrapper>
-          </ContentImage>
-        </ContainerImage>
-        <SharedLayout />
+        <TitleSection title="Hard Skills" />
+        <ContentInfo>
+          <SharedLayout />
+        </ContentInfo>
       </Content>
     </Container>
   );
