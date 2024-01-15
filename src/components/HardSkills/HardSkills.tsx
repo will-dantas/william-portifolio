@@ -3,6 +3,7 @@
 import { SharedLayout } from "../SharedLayout/SharedLayout";
 import { TitleSection } from "../TitleSection/TitleSection";
 import {
+  ColorBackground,
   Container,
   Content,
   ContentInfo
@@ -11,8 +12,10 @@ import {
 export const HardSkills = () => {
   return (
     <Container id="hard-skills">
+      <ColorBackground>
+      </ColorBackground>
       <Content>
-        <TitleSection title="Hard Skills" />
+        <TitleSection title="Habilidades" />
         <ContentInfo>
           <SharedLayout />
         </ContentInfo>

@@ -27,7 +27,7 @@ export const Content = styled(motion.div)`
   justify-content: space-between;
 
   @media (max-width: 768px) {
-    flex-direction: column-reverse;
+    flex-direction: column;
     padding: 4rem 2rem 4rem 2rem;
   }
 `;

@@ -25,7 +25,7 @@ export const Content = styled.div<BurguerMenuProps>`
     display: none;
     width: 2rem;
     height: 0.25rem;
-    background: ${({ open }) => open ? 'var(--green-500)' : 'white'};
+    background: ${({ open }) => open ? 'var(--blue-700)' : 'white'};
     border-radius: 10px;
     transform-origin: 1px;
     transition: all 0.3s linear;

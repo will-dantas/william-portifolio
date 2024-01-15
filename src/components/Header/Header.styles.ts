@@ -25,7 +25,7 @@ export const Content = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.43rem 1.5rem 0.43rem 1.5rem;
+  padding: 0.6rem 1.5rem 0.6rem 1.5rem;
   border-radius: 0.6rem;
   background: var(--gray-700);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
@@ -40,7 +40,8 @@ export const Content = styled.div`
 
 export const ImageWrapper = styled(Image)`
   object-fit: cover;
-  width: 4.5rem;
+  width: 4rem;
   height: auto;
+  border-radius: 0.8rem;
 `;
 

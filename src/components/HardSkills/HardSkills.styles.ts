@@ -8,6 +8,23 @@ export const Container = styled.section`
   height: 6rem;
   align-items: center;
   height: 100vh;
+  position: relative;
+`;
+
+export const ColorBackground = styled.div`
+  background: var(--purple-700);
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  width: 100%;
+  max-width: 1300px;
+  height: 100%;
+  border-radius: 1rem;
+
+  @media (max-width: 768px) {
+    width: 95%;
+    height: 125%;
+  }
 `;
 
 export const Content = styled.div`

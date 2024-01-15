@@ -25,7 +25,7 @@ export const ContentBalloons = styled.div`
 
 export const Balloons = styled.div`
   display: flex;
-  width: auto;
+  width: fit-content;
   border-radius: 7px;
   background: rgba(255, 255, 255, 0.10);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -36,7 +36,7 @@ export const Balloons = styled.div`
 
 export const LastBalloons = styled.div`
   display: flex;
-  width: auto;
+  width: fit-content;
   border-radius: 7px;
   border-bottom-left-radius: 0;
   background: rgba(255, 255, 255, 0.10);
