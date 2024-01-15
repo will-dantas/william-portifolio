@@ -151,10 +151,10 @@ export const DivItems = styled(motion.div)`
   align-items: center;
   gap: 1rem;
   background: var(--black-800);
-  margin: 0.4rem;
+  margin: 0.2rem;
   border-radius: 0.5rem;
   border: 2px solid var(--black-800);
-  padding: 0.8rem;
+  padding: 0.6rem 1.6rem;
   transition: all 0.5s;
 
   h3 {
@@ -164,6 +164,10 @@ export const DivItems = styled(motion.div)`
   &:hover {
     border: 2px solid var(--blue-700);
     transition: 0.5s
+  }
+
+  @media (max-width: 768px) {
+    margin: 0.4rem;
   }
 `;
 

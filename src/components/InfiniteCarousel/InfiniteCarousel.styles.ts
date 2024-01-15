@@ -54,7 +54,7 @@ export const Content = styled.div`
     }
   }
 
-  animation: 35s slide infinite linear;
+  animation: 60s slide infinite linear;
   display: inline-block;
 
   img {
