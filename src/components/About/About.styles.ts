@@ -126,7 +126,7 @@ export const ContainerAbout = styled(motion.div)`
 `;
 
 export const SalutationAbout = styled.h2`
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   margin-bottom: 2rem;
 `;
 

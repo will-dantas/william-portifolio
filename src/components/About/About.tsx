@@ -68,24 +68,6 @@ export const About = () => {
             </ContainerCards>
           </CardResumeInfo>
         </CardsContainer>
-        {/* <CardAbout
-            type="frontend"
-            title="Front End"
-            image={ImageMacbook}
-            text="React, Next.JS, TypeScript, Jest, Redux, Contexct API..."
-          />
-          <CardAbout
-            type="mobile"
-            title="Mobile"
-            image={ImageIphone}
-            text="React Native, Expo, TypeScript, Responsividade, kotlin..."
-          />
-          <CardAbout
-            type="backend"
-            title="Back End"
-            image={Backend}
-            text="Node.Js, SQL, NoSQL, Express, Nest.Js, CI/CD.."
-          /> */}
         <ContainerAbout
           ref={ref}
           animate={controls}

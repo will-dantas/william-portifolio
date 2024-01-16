@@ -1,7 +1,6 @@
 'use client'
 
 import { Container, Content } from "./BurguerMenu.styles";
-import { SideBar } from "../SideBar/SideBar";
 import { useMenu } from "../../hooks/useMenu";
 
 export const BurguerMenu = () => {
@@ -18,7 +17,6 @@ export const BurguerMenu = () => {
         <div />
         <div />
       </Content>
-      <SideBar open={menuOpen} />
     </Container>
   );
 };

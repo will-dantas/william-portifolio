@@ -38,31 +38,15 @@ export const Container = styled.li`
 		}
 	}
 
-  > svg {
-    margin-right: 0.5rem;
-  }
-
-  @media (max-width: 768px) {
-    margin: .8rem 0 0rem 0;
+  @media (max-width: 1150px) {
+    margin: 0.4rem 0.8rem 0.4rem 0.8rem;
     padding: 1rem;
-    width: 100%;
-    background: var(--black-600);
-
-    > svg {
-      margin-right: 1rem;
-    }
+    border: 2px solid var(--blue-700);
+    border-radius: 1rem;
 
     &:hover {
       background: var(--blue-700);
       padding: 1rem;
-      color: var(--black-600);
-
-      p {
-        margin-right: 2rem;
-        color: var(--black-600);
-        font-weight: 500;
-        transition: 0.6s
-      }
 
       &::after{
 		    content: none;
