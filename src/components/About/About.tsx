@@ -23,6 +23,9 @@ import { TitleSection } from "../TitleSection/TitleSection";
 export const About = () => {
   const controls = useAnimation();
   const [ref, inView] = useInView();
+  const screenSize: Screen = screen
+  const isMobile = screenSize.width <= 768;
+  const breakLine = isMobile ? <br /> : '';
 
   useEffect(() => {
     if (inView) {
@@ -74,9 +77,9 @@ export const About = () => {
           initial="hidden"
           variants={container}
         >
-          <TitleSection title="Sobre"/>
+          <TitleSection title="Sobre" />
           <SalutationAbout>
-            Olá! Sou William Dantas
+            Prazer!{breakLine} Sou o William
           </SalutationAbout>
           <DescriptionAbout>
             Com mais de 3 anos anos de experiência como Desenvolvedor de Software FullStack,

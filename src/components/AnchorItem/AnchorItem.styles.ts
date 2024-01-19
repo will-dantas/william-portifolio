@@ -16,6 +16,10 @@ export const Container = styled.li`
   transition: all 0.6s;
   width: auto;
 
+  p {
+    font-weight: 700;
+  }
+
   &::after{
 		transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 		content: '';

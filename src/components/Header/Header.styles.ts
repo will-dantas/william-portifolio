@@ -5,7 +5,7 @@ interface MenuProps {
   open: boolean;
 }
 
-export const Header = styled.header`
+export const ContainerHeader = styled.header`
   position: fixed;
   width: 100%;
   top: 0;

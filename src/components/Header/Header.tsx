@@ -2,15 +2,15 @@
 
 import { useMenu } from "@/hooks/useMenu";
 import { BurguerMenu } from "../BurguerMenu/BurguerMenu";
-import { AncorLogo, Header, ImageWrapper, Li, Nav, NavMenu, Ul } from "./Header2.styles";
+import { AncorLogo, ContainerHeader, ImageWrapper, Li, Nav, NavMenu, Ul } from "./Header.styles";
 import Logo from "../../../public/logo-wd.png"
 import { AnchorItem } from "../AnchorItem/AnchorItem";
 
-export const Header2 = () => {
+export const Header = () => {
   const { menuOpen } = useMenu();
 
   return (
-    <Header>
+    <ContainerHeader>
       <Nav>
         <AncorLogo><ImageWrapper src={Logo} alt="Logo William Dantas" /></AncorLogo>
         <NavMenu open={menuOpen}>
@@ -25,6 +25,6 @@ export const Header2 = () => {
         </NavMenu>
         <BurguerMenu />
       </Nav>
-    </Header>
+    </ContainerHeader>
   );
 };

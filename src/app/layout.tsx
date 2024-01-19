@@ -2,7 +2,7 @@ import { Inter } from "next/font/google";
 import StyledComponentsRegistry from "./lib/registry";
 import { GlobalStyles } from "@/styles/GlobalStyles";
 import { MenuProvider } from "@/context/MenuContext";
-import { Header2 } from "@/components/Header2/Header2";
+import { Header } from "@/components/Header/Header";
 
 export const metadata = {
   title: "William Dantas",
@@ -21,7 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <MenuProvider>
           <StyledComponentsRegistry>
             <GlobalStyles />
-            <Header2 />
+            <Header />
             {children}
           </StyledComponentsRegistry>
         </MenuProvider>

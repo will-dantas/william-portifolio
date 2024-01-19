@@ -13,8 +13,11 @@ import {
   YearExperience,
   ContatContainer,
   ContainerBlur,
-  ContentImage
-}from "./Cover.styles";
+  ContentImage,
+  Font3d,
+  Div,
+  ContentFont
+} from "./Cover.styles";
 
 export const Cover = () => {
   const windowScroll = () => {
@@ -32,12 +35,12 @@ export const Cover = () => {
     <Container>
       <ContainerBlur>
         <Content>
-          <CoverDescription
+          {/* <CoverDescription
             variants={container}
             initial="hidden"
             animate="show"
-          >
-            <CoverLine variants={item}>
+          > */}
+          {/* <CoverLine variants={item}>
               Prazer! Sou <CoverStrong>William Dantas,</CoverStrong>
             </CoverLine>
             <CoverLine variants={item}>
@@ -57,9 +60,20 @@ export const Cover = () => {
                 <p>Stack</p>
                 <p>JavaScript</p>
               </div>
-            </YearExperience>
-          </CoverDescription>
-          <ContentImage
+            </YearExperience> */}
+          <Div>
+            <h2>Prazer, sou o</h2>
+          </Div>
+          <ContentFont>
+            <Font3d>William</Font3d>
+            <Font3d>Dantas</Font3d>
+          </ContentFont>
+          <p>Desenvolvedor FullStack, busco contribuir como Densenvolvedor de Software <br/> em empresas que valorizam a inovação e organização.</p>
+          <ContatContainer variants={item} onClick={() => windowScroll()}>
+            <HiOutlineMail style={{ marginRight: "0.8rem", fontSize: "1.2rem" }} /> Contate-me
+          </ContatContainer>
+          {/* </CoverDescription> */}
+          {/* <ContentImage
             variants={itemImage}
             initial="hidden"
             animate="show"
@@ -68,7 +82,7 @@ export const Cover = () => {
               src={ImageWilliam} 
               alt="imagem de william dantas com suas principais tecnologias" 
             />
-          </ContentImage>
+          </ContentImage> */}
         </Content>
       </ContainerBlur>
     </Container>
