@@ -8,7 +8,7 @@ interface ListPros {
   selected: boolean;
 }
 
-export const Window = styled.div`
+export const Window = styled(motion.div)`
   display: flex;
   flex-direction: column;
   width: 100%;

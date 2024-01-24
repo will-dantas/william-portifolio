@@ -1,5 +1,6 @@
 'use client'
 
+import { motion } from "framer-motion";
 import { styled } from "styled-components";
 
 export const Container = styled.section`
@@ -33,7 +34,7 @@ export const Content = styled.div`
   padding: 2rem;
 `;
 
-export const ContentInfo = styled.div`
+export const ContentInfo = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: center;

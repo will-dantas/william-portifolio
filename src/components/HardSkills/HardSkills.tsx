@@ -1,5 +1,6 @@
 'use client'
 
+import { container } from "../Cover/Cover.animate";
 import { SharedLayout } from "../SharedLayout/SharedLayout";
 import { TitleSection } from "../TitleSection/TitleSection";
 import {
@@ -16,7 +17,11 @@ export const HardSkills = () => {
       </ColorBackground>
       <Content>
         <TitleSection title="Habilidades" />
-        <ContentInfo>
+        <ContentInfo
+          variants={container}
+          initial="hidden"
+          animate="show"
+        >
           <SharedLayout />
         </ContentInfo>
       </Content>

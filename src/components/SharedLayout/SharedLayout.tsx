@@ -17,12 +17,15 @@ import {
   Ul,
   Window
 } from "./SharedLayout.styles";
+import { item } from "../Cover/Cover.animate";
 
 export const SharedLayout = () => {
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
 
   return (
-    <Window>
+    <Window
+      variants={item}
+    >
       <BarMac>
         <button></button>
         <button></button>
