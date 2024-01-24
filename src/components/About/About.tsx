@@ -23,8 +23,12 @@ import { TitleSection } from "../TitleSection/TitleSection";
 export const About = () => {
   const controls = useAnimation();
   const [ref, inView] = useInView();
-  const screenSize: Screen = screen
-  const isMobile = screenSize.width <= 768;
+  let isMobile;
+  
+  if (typeof screen !== 'undefined') {
+    isMobile = screen.width <= 768;
+  }
+  
   const breakLine = isMobile ? <br /> : '';
 
   useEffect(() => {

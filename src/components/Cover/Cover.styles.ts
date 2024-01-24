@@ -16,7 +16,7 @@ export const Container = styled.section`
   height: 100vh;
 `;
 
-export const ContainerBlur = styled.div`
+export const ContainerBlur = styled(motion.div)`
   width: 100%;
   height: 100%;
   display: flex;
@@ -36,78 +36,27 @@ export const Content = styled.div`
   flex-direction: column;
   gap: 1rem;
 
-  p {
-    text-align: center;
-    font-size: 1.1rem;
-    letter-spacing: .1rem;
-  }
-
   @media (max-width: 768px){
     padding: 2rem;
     margin-bottom: 0rem;
-
-    p {
-      margin-top: 1rem;
-    }
   }
 `;
 
-export const Div = styled.div`
+export const Div = styled(motion.div)`
   display: flex;
   justify-content: center;
   width: 100%;
   letter-spacing: .3rem;
 `;
 
-export const CoverDescription = styled(motion.div)`
-  height: 20rem;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2rem;
-`;
-
-export const Paragraph = styled.p`
-  display: flex;
+export const Paragraph = styled(motion.p)`
+  text-align: center;
+  font-size: 1.1rem;
+  letter-spacing: .1rem;
 
   @media (max-width: 768px){
-    display: flex;
-    text-align: center;
-  }
-`;
-
-export const CoverLine = styled(motion.h1)`
-  font-family: 'Inter', sans-serif;
-  color: #fff;
-  font-weight: 900;
-  font-size: 3rem;
-  opacity: 0.9;
-
-  @media (max-width: 768px){
-    font-size: 2rem;
-    text-align: center;
-  }
-`;
-
-export const CoverStrong = styled.strong`
-  color: var(--green-500);
-  font-size: 3rem;
-
-  @media (max-width: 768px){
-    font-size: 2.5rem;
-    white-space: nowrap;
-  }
-`;
-
-export const ContentImage = styled(motion.div)`
-
-`;
-
-export const ImageWrapper = styled(Image)`
-  height: auto;
-
-  @media (max-width: 768px){
-    object-fit: cover;
-    width: 100%;
+    margin-top: 1rem;
+    letter-spacing: 0;
   }
 `;
 
@@ -154,36 +103,7 @@ export const ContatContainer = styled(motion.button)`
   }
 `;
 
-export const YearExperience = styled(motion.div)`
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  margin-top: 4rem;
-
-  div {
-    margin-left: 0.5rem;
-    margin-right: 1rem;
-  }
-
-  span {
-    font-size: 3rem;
-    font-weight: 300;
-  }
-
-  p {
-    font-weight: 300;
-    color: var(--black-800);
-    font-weight: 500;
-  }
-
-  @media (max-width: 768px){
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
-  }
-`;
-
-export const ContentFont = styled.div`
+export const ContentFont = styled(motion.div)`
   display: flex;
   justify-content: center;
   align-items: center;
