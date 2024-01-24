@@ -1,16 +1,21 @@
-const container = {
-  hidden: { opacity: 1, scale: 0 },
+'use client'
+
+export const containerAnimationExperience = {
+  hidden: {
+    opacity: 1,
+    scale: 0
+  },
   visible: {
     opacity: 1,
     scale: 1,
     transition: {
-      delayChildren: 0.3,
+      delayChildren: 0.8,
       staggerChildren: 0.2
     }
   }
 };
 
-const item = {
+export const itemAnimationExperence = {
   hidden: { y: 20, opacity: 0 },
   visible: {
     y: 0,

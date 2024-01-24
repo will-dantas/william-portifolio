@@ -5,7 +5,6 @@ import Image from "next/image";
 import { styled } from "styled-components";
 
 export const Container = styled.section`
-  background: var(--black-800);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,11 +16,11 @@ export const Container = styled.section`
   }
 `;
 
-export const Content = styled.div`
+export const Content = styled(motion.div)`
   display: flex;
   flex-direction: column;
-  gap: 2rem;
   max-width: 1216px;
+  width: 100%;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -29,12 +28,70 @@ export const Content = styled.div`
 `;
 
 export const ContentCardsTimeLine = styled(motion.div)`
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
+  padding: 2.5rem;
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-top: 3em;
+  font-size: 19px;
+  text-align: left;
 
-  @media (max-width: 768px) {
-    flex-direction: column;
+  &[data-color="blue"] {
+    background: var(--blue-700);
+  }
+
+  &[data-color="red"] {
+    background: var(--red-700);
+  }
+
+  p {
+    color: var(--black-900)
+  }
+
+  &:not(.img-as-jpg) img {
+    top: -6%;
+    right: -2%;
+    width: 31%;
+    height: 130%;
+  }
+
+  img {
+    position: absolute;
+    transform: rotate(-7deg);
+    transition: all .3s;
+    font-size: 10rem;
+    border-radius: 1rem;
+    fill: yellow;
+    z-index: 0;
+
+    &[data-color="blue"] {
+      background: var(--blue-200);
+    }
+
+    &[data-color="red"] {
+      background: var(--orange-100);
+    }
+  }
+
+  @media screen and (min-width: 0px) and (max-width: 1010px) {
+    margin-top: 2em;
+    min-height: 20rem;
+  }
+
+  @media screen and (min-width: 0px) and (max-width: 1010px) {
+    &:not(.img-as-jpg) img {
+      width: 45%;
+      height: 45%;
+      right: -5%;
+    }
+  }
+
+  @media screen and (min-width: 0px) and (max-width: 1010px) {
+    &:not(.img-as-jpg) img {
+      top: initial;
+      bottom: -4%;
+    }
   }
 `;
 
@@ -43,11 +100,6 @@ export const ConteinerTimeLine = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: start;
-  border-radius: 0.5rem;
-  padding: 2rem;
-  box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
-    0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
-    0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
 
   @media (max-width: 768px) {
     padding: 2.5rem;
@@ -61,19 +113,22 @@ export const Ctimeline = styled.ul`
   margin-right: auto;
 `;
 
-export const ContentImage = styled.div`
+export const ContentInformation = styled.div`
   display: flex;
   justify-content: start;
-  align-items: center;
+  align-items: start;
+  flex-direction: column;
   gap: 1rem;
 `;
 
 export const ImageWrapper = styled(Image)`
-  width: 3rem;
-  height: 3rem;
-  padding: 5px;
-  background: var(--green-500);
-  border-radius: 0.5rem;
+  top: 14%;
+  right: -37%;
+  width: 6rem;
+  height: auto;
+  position: absolute;
+  transform: rotate(-7deg);
+  transition: all .3s;
 `;
 
 export const HeaderExperience = styled.div`

@@ -8,18 +8,16 @@ interface ListPros {
   selected: boolean;
 }
 
-export const Window = styled.div`
-  width: 100%;
-  height: 30rem;
-  border-radius: 0.5rem;
-  background: var(--black-600);
-  overflow: hidden;
-  box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
-    0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
-    0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
+export const Window = styled(motion.div)`
   display: flex;
   flex-direction: column;
-
+  width: 100%;
+  height: 30rem;
+  border-radius: 1rem;
+  background: var(--black-600);
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  
   @media (max-width: 768px) {
     height: 70vh;
   }
@@ -66,10 +64,6 @@ export const Nav = styled.nav`
 `;
 
 export const Main = styled.main`
-  display: flex;
-  justify-content: center;
-  font-size: 128px;
-  flex-grow: 1;
   user-select: none;
   height: 100%;
   overflow: auto;
@@ -122,13 +116,16 @@ export const Li = styled.ul<ListPros>`
     bottom: -1px;
     left: 0;
     right: 0;
-    height: 2px;
-    background: var(--green-500);
+    height: 4px;
+    background: var(--blue-700);
   }
 
   svg {
-    font-size: 1.2rem;
-    color: var(--green-500);
+    font-size: 1.6rem;
+    background: var(--blue-200);
+    padding: 0.2rem;
+    border-radius: 1rem;
+    color: var(--blue-700);
   }
 
   @media (max-width: 768px) {
@@ -138,31 +135,39 @@ export const Li = styled.ul<ListPros>`
 `;
 
 export const ContainerItems = styled(motion.div)`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
 `;
 
 export const DivItems = styled(motion.div)`
   display: flex;
   justify-content: start;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   background: var(--black-800);
-  box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
-    0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
-    0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
-  margin: 1rem;
+  margin: 0.2rem;
   border-radius: 0.5rem;
   border: 2px solid var(--black-800);
-  padding: 0.8rem;
+  padding: 0.6rem 1.6rem;
   transition: all 0.5s;
 
-  h1 {
-    font-size: 1.5rem;
-    font-weight: 500;
+  h3 {
+    font-size: 1rem;
   }
 
   &:hover {
-    border: 2px solid var(--green-500);
+    border: 2px solid var(--blue-700);
     transition: 0.5s
+  }
+
+  @media (max-width: 768px) {
+    margin: 0.4rem;
   }
 `;
 
@@ -170,6 +175,6 @@ export const ImageWrapper = styled(Image)`
   width: 3rem;
   height: auto;
   border-radius: 0.5rem;
-  background: var(--gray-400);
+  background: var(--shape);
   padding: 0.2rem;
 `;

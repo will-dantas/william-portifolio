@@ -13,14 +13,12 @@ export const CardAboutContainer = styled(motion.div)`
   height: auto;
   padding: 2rem;
   margin-top: 2rem;
-  border-radius: 0.5rem;
-  background: var(--black-600);
+  border-radius: 1rem;
+  background: var(--blue-200);
   transition: all 0.6s;
   color: var(--green-500);
-  box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
-    0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
-    0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
-
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  
   &:hover {
     transition: 0.6s;
   }
@@ -29,6 +27,7 @@ export const CardAboutContainer = styled(motion.div)`
 export const CardTitle = styled.h2`
   font-size: 1.5rem;
   font-weight: 500;
+  color: var(--blue-700);
 `;
 
 export const HeaderCard = styled.header`
@@ -46,7 +45,7 @@ export const HeaderCard = styled.header`
 export const CardText = styled.p`
   font-size: 1rem;
   margin-top: 0.5rem;
-  color: var(--text-body);
+  color: var(--black-900);
   min-width: 18rem;
 `;
 

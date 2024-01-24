@@ -16,6 +16,10 @@ export const Container = styled.li`
   transition: all 0.6s;
   width: auto;
 
+  p {
+    font-weight: 700;
+  }
+
   &::after{
 		transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 		content: '';
@@ -29,40 +33,24 @@ export const Container = styled.li`
 	}
 
   &:hover{
-    color: var(--green-500);
+    color: var(--blue-200);
     transition: 0.6s;
 
 		&::after{
-		  background: var(--green-500);
+		  background: var(--blue-700);
 		  width: 83%;
 		}
 	}
 
-  > svg {
-    margin-right: 0.5rem;
-  }
-
-  @media (max-width: 768px) {
-    margin: .8rem 0 0rem 0;
+  @media (max-width: 1150px) {
+    margin: 0.4rem 0.8rem 0.4rem 0.8rem;
     padding: 1rem;
-    width: 100%;
-    background: var(--black-600);
-
-    > svg {
-      margin-right: 1rem;
-    }
+    border: 2px solid var(--blue-700);
+    border-radius: 1rem;
 
     &:hover {
-      background: var(--green-500);
+      background: var(--blue-700);
       padding: 1rem;
-      color: var(--black-600);
-
-      p {
-        margin-right: 2rem;
-        color: var(--black-600);
-        font-weight: 500;
-        transition: 0.6s
-      }
 
       &::after{
 		    content: none;

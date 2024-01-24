@@ -17,12 +17,15 @@ import {
   Ul,
   Window
 } from "./SharedLayout.styles";
+import { item } from "../Cover/Cover.animate";
 
 export const SharedLayout = () => {
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
 
   return (
-    <Window>
+    <Window
+      variants={item}
+    >
       <BarMac>
         <button></button>
         <button></button>
@@ -35,6 +38,7 @@ export const SharedLayout = () => {
               key={index}
               selected={item === selectedTab ? true : false}
               onClick={() => setSelectedTab(item)}
+              data-color={item.name}
             >
               {item.icon === '1' ? <RiComputerLine /> :
                 item.icon === '2' ? <IoPhonePortraitOutline /> :
@@ -60,7 +64,7 @@ export const SharedLayout = () => {
                 transition={{ duration: 0.2 }}
               >
                 <ImageWrapper src={item.iconItem} alt={`Logo do ${item.nameItem}`} />
-                <h1>{item.nameItem}</h1>
+                <h3>{item.nameItem}</h3>
               </DivItems>
             ))}
           </AnimatePresence>

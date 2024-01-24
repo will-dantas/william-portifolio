@@ -7,6 +7,7 @@ import { Container, Content } from "./Contact.styles"
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import { container } from "./Contact.animations";
+import { Chat } from "../Chat/Chat";
 
 export const Contact = () => {
   const controls = useAnimation();
@@ -26,7 +27,7 @@ export const Contact = () => {
         initial="hidden"
         variants={container}
       >
-        <CardContact />
+        <Chat />
         <EmailContact />
       </Content>
     </Container>

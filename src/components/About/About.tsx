@@ -1,28 +1,35 @@
 'use client'
 
 import { HiCode } from "react-icons/hi";
-import { CardAbout } from "../../components/CardAbout/CardAbout";
 import { useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-import { characterAnimation, container } from "./About.animations";
-import ImageMacbook from "../../../public/frontend.png"
-import ImageIphone from "../../../public/mobile.png"
-import Backend from "../../../public/backend.png"
+import { container } from "./About.animations";
+import ImageWilliam from "../../../public/william_image.png"
 import {
+  CardColor,
+  CardResumeInfo,
   CardsContainer,
   Container,
   ContainerAbout,
+  ContainerCards,
   Content,
   DescriptionAbout,
-  HeaderAbout,
-  SalutationAbout,
-  TitleAbout
+  ImageCard,
+  SalutationAbout
 } from "./About.styles";
+import { TitleSection } from "../TitleSection/TitleSection";
 
 export const About = () => {
   const controls = useAnimation();
   const [ref, inView] = useInView();
+  let isMobile;
+  
+  if (typeof screen !== 'undefined') {
+    isMobile = screen.width <= 768;
+  }
+  
+  const breakLine = isMobile ? <br /> : '';
 
   useEffect(() => {
     if (inView) {
@@ -39,46 +46,51 @@ export const About = () => {
           initial="hidden"
           variants={container}
         >
-          <CardAbout
-            type="frontend"
-            title="Front End"
-            image={ImageMacbook}
-            text="React, Next.JS, TypeScript, Jest, Redux, Contexct API..."
+          <ImageCard
+            src={ImageWilliam}
+            alt="imagem de william dantas com suas principais tecnologias"
           />
-          <CardAbout
-            type="mobile"
-            title="Mobile"
-            image={ImageIphone}
-            text="React Native, Expo, TypeScript, Responsividade, kotlin..."
-          />
-          <CardAbout
-            type="backend"
-            title="Back End"
-            image={Backend}
-            text="Node.Js, SQL, NoSQL, Express, Nest.Js, CI/CD.."
-          />
+          <CardResumeInfo
+            ref={ref}
+            animate={controls}
+            initial="hidden"
+            variants={container}
+          >
+            <ContainerCards>
+              <CardColor data-color="one">
+                <HiCode />
+                <p>+3</p>
+                <small>anos</small>
+              </CardColor>
+              <CardColor data-color="two">
+                <HiCode />
+                <p>Full</p>
+                <small>Stack</small>
+              </CardColor>
+              <CardColor data-color="three">
+                <HiCode />
+                <p>+15</p>
+                <small>projetos</small>
+              </CardColor>
+            </ContainerCards>
+          </CardResumeInfo>
         </CardsContainer>
         <ContainerAbout
           ref={ref}
           animate={controls}
           initial="hidden"
-          variants={characterAnimation}
+          variants={container}
         >
-          <HeaderAbout>
-            <HiCode />
-            <TitleAbout>
-              Sobre
-            </TitleAbout>
-          </HeaderAbout>
+          <TitleSection title="Sobre" />
           <SalutationAbout>
-            Olá! Sou William Dantas
+            Prazer!{breakLine} Sou o William
           </SalutationAbout>
           <DescriptionAbout>
-          Com mais de 3 anos anos de experiência como Desenvolvedor de Software FullStack,
-          trago uma trajetória diversificada e repleta de realizações. Durante minha carreira,
-          tive o privilégio de trabalhar em diferentes contextos e projetos desafiadores,
-          o que me permitiu aprimorar minhas habilidades e contribuir significativamente
-          para o sucesso das equipes e organizações com as quais colaborei.
+            Com mais de 3 anos anos de experiência como Desenvolvedor de Software FullStack,
+            trago uma trajetória diversificada e repleta de realizações. Durante minha carreira,
+            tive o privilégio de trabalhar em diferentes contextos e projetos desafiadores,
+            o que me permitiu aprimorar minhas habilidades e contribuir significativamente
+            para o sucesso das equipes e organizações com as quais colaborei.
           </DescriptionAbout>
         </ContainerAbout>
       </Content>

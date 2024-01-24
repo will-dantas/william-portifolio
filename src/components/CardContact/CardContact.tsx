@@ -1,8 +1,10 @@
 import ImageWilliam from "../../../public/image-william-dantas.png"
+import ImageChat from "../../../public/chat.png";
 import { Container, Content, ImageCard, Link, LinksCard, Location, LocationContent, TitleCard } from "./CardContact.styles"
 import { AiFillLinkedin, AiFillGithub, AiFillInstagram } from "react-icons/ai";
 import { TiLocation } from "react-icons/ti";
 import { MdEmail } from "react-icons/md";
+import Image from "next/image";
 
 export const CardContact = () => {
   const item = {

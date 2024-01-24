@@ -8,12 +8,22 @@ export const GlobalStyles = createGlobalStyle`
     --black-600: #2D2E32;
     --black-700: #25262a;
     --black-800: #1E1F22;
+    --black-900: #000;
+    /* --green-100: #D4F6ED;*/
+    --orange-100: #FFE1CC; 
+    --blue-200: #81BCF3; 
+    --purple-100: #9998F5;
+
+    --red-700: #EE004F;
+    --orange-700: #FB5C59;
+    --blue-700: #0051D6;
+    --purple-700: #5429CC;
+    --yellow-700: #FF9504;
 
     --gray-300: #8E8E8E;
     --gray-400: #454546;
     --gray-700: #25262A;
     --red: #E62E4D;
-    --blue: #5429CC;
     --green: #33CC95;
     --blue-light: #6933FF;
     --text-title: #363F5F;
@@ -28,7 +38,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    background: #2D2E32;
+    background: #1E1F22;
     color: #f0f2f5;
   }
 
@@ -51,5 +61,16 @@ export const GlobalStyles = createGlobalStyle`
 
   &::-webkit-scrollbar-corner {
     background: var(--black-600);
+  }
+
+  h1, h2, h3 {
+    font-family: "Inter var", Inter, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 900;
+  }
+
+  p, textarea {
+    font-family: "Inter var", Inter, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
   }
 `;

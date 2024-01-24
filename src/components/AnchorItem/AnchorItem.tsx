@@ -13,8 +13,10 @@ export const AnchorItem = ({ text, windowLocation }: IAnchorItem) => {
     const element: any = document.querySelector(`#${windowLocation}`);
 
     if (element !== null) {
+      const isMobile =  screen.width <= 768 ? 60 : 0;
+    
       window.scrollTo({
-        top: element?.offsetTop,
+        top: element?.offsetTop - isMobile,
         behavior: "smooth",
       })
     }
@@ -22,9 +24,7 @@ export const AnchorItem = ({ text, windowLocation }: IAnchorItem) => {
 
   return (
     <Container onClick={() => windowScroll()}>
-      <p>
-        {text}
-      </p>
+      <p>{text}</p>
     </Container>
   )
 }

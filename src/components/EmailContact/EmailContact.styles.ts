@@ -9,10 +9,8 @@ export const Container = styled(motion.div)`
   flex: 1;
   justify-content: center;
   align-items: center;
-  border-radius: 0.5rem;
-  box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
-    0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
-    0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 `;
 
 export const FormContent = styled.form`
@@ -37,7 +35,7 @@ export const InputContent = styled.div`
 `;
 
 export const Label = styled.label`
-  color: var(--green-500);
+  color: var(--blue-200);
   text-align: start;
   font-weight: 500;
 `;
@@ -56,14 +54,14 @@ export const Input = styled.input`
   outline: none;
 
   &:focus {
-    border: 2px solid var(--green-500);
+    border: 2px solid var(--blue-700);
   }
 `;
 
 export const TextArea = styled.textarea`
   background: var(--gray-400);
   color: var(--white);
-  font-size: 1rem;
+  font-size: 1.2rem;
   border-radius: 0.5rem;
   width: 100%;
   height: 8rem;
@@ -74,8 +72,9 @@ export const TextArea = styled.textarea`
   outline: none;
   resize: none;
 
+
   &:focus {
-    border: 2px solid var(--green-500);
+    border: 2px solid var(--blue-700);
   }
 `;
 
@@ -92,14 +91,15 @@ export const ButtonSubmit = styled.button`
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background: var(--green-500);
+  background: var(--blue-700);
   border-radius: 0.5rem;
   color: black;
   font-weight: bolder;
   padding: 0.5rem;
-  border: 2px solid var(--green-500);
+  border: 2px solid var(--blue-700);
   transition: 0.5s all;
   width: 40%;
+  color: var(--shape);
 
   svg {
     font-size: 1.2rem;
@@ -117,9 +117,9 @@ export const ButtonSubmit = styled.button`
   }
 
   &:hover {
-    background: var(--black-600);
-    border: 2px solid var(--green-500);
-    color: white;
+    background: var(--blue-200);
+    border: 2px solid var(--blue-200);
+    color: var(--black-900);
     transition: 0.5s;
   }
 
