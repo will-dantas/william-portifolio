@@ -9,28 +9,32 @@ import { useEffect, useState } from "react";
 
 export const Header = () => {
   const { menuOpen } = useMenu();
-  const [position, setPosition] = useState(window.scrollY)
-  const [visible, setVisible] = useState(true) 
-  
-  useEffect(()=> {
+  let headerHiddeen;
+  if (typeof window !== "undefined") {
+    const [position, setPosition] = useState(window.scrollY)
+    const [visible, setVisible] = useState(true)
+
+    useEffect(() => {
       const handleScroll = () => {
-         let moving = window.scrollY
-         
-         setVisible(position > moving);
-         setPosition(moving)
+        let moving = window.scrollY
+
+        setVisible(position > moving);
+        setPosition(moving)
       };
 
       window.addEventListener("scroll", handleScroll);
 
-      return(() => {
-         window.removeEventListener("scroll", handleScroll);
+      return (() => {
+        window.removeEventListener("scroll", handleScroll);
       })
-  })
+    })
 
-const cls = visible ? "visible" : "hidden";
+    headerHiddeen = visible ? "visible" : "hidden";
+  }
+
 
   return (
-    <ContainerHeader data-hide={cls}>
+    <ContainerHeader data-hide={headerHiddeen}>
       <Nav>
         <AncorLogo><ImageWrapper src={Logo} alt="Logo William Dantas" /></AncorLogo>
         <NavMenu open={menuOpen}>
