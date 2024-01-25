@@ -1,7 +1,6 @@
 'use client'
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { styled } from "styled-components";
 
 export const Container = styled.section`
@@ -42,11 +41,13 @@ export const Content = styled.div`
   }
 `;
 
-export const Div = styled(motion.div)`
+export const H2 = styled(motion.h2)`
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
-  letter-spacing: .3rem;
+  letter-spacing: .2rem;
+  font-size: 2rem;
 `;
 
 export const Paragraph = styled(motion.p)`
@@ -117,24 +118,20 @@ export const ContentFont = styled(motion.div)`
 `;
 
 export const Font3d = styled.span`
-    font-family: "Inter var", Inter, "Helvetica Neue", Arial, sans-serif;
     font-size: 6rem;
     font-weight: 900;
-    color: #f5f5f5;
-    text-shadow: 1px 1px 1px #919191,
-        1px 2px 1px #919191,
-        1px 3px 1px #919191,
-        1px 4px 1px #919191,
-        1px 5px 1px #919191,
-        1px 6px 1px #919191,
-        1px 7px 1px #919191,
-        1px 8px 1px #919191,
-        1px 9px 1px #919191,
-        1px 10px 1px #919191,
-    1px 18px 6px rgba(16,16,16,0.4),
-    1px 22px 10px rgba(16,16,16,0.2),
-    1px 25px 35px rgba(16,16,16,0.2),
-    1px 30px 60px rgba(16,16,16,0.4);
+    color: var(--shape);
+    letter-spacing: 0.2rem;
+    text-shadow: 1px 1px 1px var(--purple-100),
+        1px 2px 1px var(--purple-100),
+        1px 3px 1px var(--purple-100),
+        1px 4px 1px var(--purple-100),
+        1px 5px 1px var(--purple-100),
+        1px 6px 1px var(--purple-100),
+        1px 7px 1px var(--purple-100),
+        1px 8px 1px var(--purple-100),
+        1px 9px 1px var(--purple-100),
+        1px 10px 1px var(--purple-100);
 
   @media (max-width: 768px){
     font-size: 4rem;

@@ -1,4 +1,4 @@
-import { Inter } from "next/font/google";
+import { Inter, Inter_Tight } from "next/font/google";
 import StyledComponentsRegistry from "./lib/registry";
 import { GlobalStyles } from "@/styles/GlobalStyles";
 import { MenuProvider } from "@/context/MenuContext";
@@ -8,16 +8,16 @@ export const metadata = {
   title: "William Dantas",
   description: "Potifólio de William Dantas",
   icons: {
-    icon: "../../public/logo-wd.png"
+    icon: "../../public/logo-william.png"
   },
 };
 
-const poppins = Inter({ subsets: ["latin"], weight: "400" });
+const inter = Inter_Tight({ style: "normal", subsets: ["latin"], weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"] });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={poppins.className}>
+      <body className={inter.className}>
         <MenuProvider>
           <StyledComponentsRegistry>
             <GlobalStyles />

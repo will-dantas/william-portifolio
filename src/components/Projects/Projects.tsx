@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { TbBrandTypescript } from "react-icons/tb";
-import { FaReact, FaNodeJs } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaGithub } from "react-icons/fa";
 import { HiCode } from "react-icons/hi";
 import { useInView } from "react-intersection-observer";
 import { container, itemAnimation } from "./Projects.animations";
@@ -72,7 +72,7 @@ export const Projects = () => {
         </ContainerCardProject>
         <ContentButtonMore>
           <AncorButton href='https://github.com/will-dantas?tab=repositories' target="_blank">
-            <HiCode /> Mais projetos
+            <FaGithub /> Mais projetos
           </AncorButton>
         </ContentButtonMore>
       </Content>

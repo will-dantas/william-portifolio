@@ -13,10 +13,8 @@ export const AnchorItem = ({ text, windowLocation }: IAnchorItem) => {
     const element: any = document.querySelector(`#${windowLocation}`);
 
     if (element !== null) {
-      const isMobile =  screen.width <= 768 ? 60 : 0;
-    
       window.scrollTo({
-        top: element?.offsetTop - isMobile,
+        top: element?.offsetTop,
         behavior: "smooth",
       })
     }

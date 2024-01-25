@@ -33,24 +33,23 @@ export const Container = styled.li`
 	}
 
   &:hover{
-    color: var(--blue-200);
+    color: var(--black-800);
     transition: 0.6s;
 
 		&::after{
-		  background: var(--blue-700);
+		  background: var(--blue-200);
 		  width: 83%;
 		}
 	}
 
   @media (max-width: 1150px) {
     margin: 0.4rem 0.8rem 0.4rem 0.8rem;
-    padding: 1rem;
+    padding: 0.4rem;
     border: 2px solid var(--blue-700);
     border-radius: 1rem;
 
     &:hover {
       background: var(--blue-700);
-      padding: 1rem;
 
       &::after{
 		    content: none;
