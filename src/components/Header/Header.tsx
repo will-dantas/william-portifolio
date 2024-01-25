@@ -9,29 +9,28 @@ import { useEffect, useState } from "react";
 
 export const Header = () => {
   const { menuOpen } = useMenu();
-  let headerHiddeen;
-  if (typeof window !== "undefined") {
-    const [position, setPosition] = useState(window.scrollY)
-    const [visible, setVisible] = useState(true)
+  const [show, setShow] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
-    useEffect(() => {
-      const handleScroll = () => {
-        let moving = window.scrollY
+  const controlNavbar = () => {
+    if (window.scrollY > lastScrollY) {
+      setShow(false); 
+    } else { 
+      setShow(true);  
+    }
 
-        setVisible(position > moving);
-        setPosition(moving)
-      };
+    setLastScrollY(window.scrollY); 
+  };
 
-      window.addEventListener("scroll", handleScroll);
+  useEffect(() => {
+    window.addEventListener('scroll', controlNavbar);
 
-      return (() => {
-        window.removeEventListener("scroll", handleScroll);
-      })
-    })
+    return () => {
+       window.removeEventListener('scroll', controlNavbar);
+    };
+  }, [lastScrollY]);
 
-    headerHiddeen = visible ? "visible" : "hidden";
-  }
-
+  const headerHiddeen = show ? "visible" : "hidden";
 
   return (
     <ContainerHeader data-hide={headerHiddeen}>
