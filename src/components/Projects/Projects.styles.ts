@@ -104,6 +104,7 @@ export const AncorButton = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 0.6rem;
   padding: 0.4rem 0.8rem 0.4rem 0.8rem;
   border-radius: 1rem;
   border: none;
@@ -139,5 +140,6 @@ export const TitleProjects = styled.h1`
 
 export const ContentButtonMore = styled.div`
   display: flex;
-  justify-content: end;
+  justify-content: center;
+  padding-top: 2rem;
 `;

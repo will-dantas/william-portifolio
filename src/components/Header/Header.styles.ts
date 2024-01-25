@@ -10,13 +10,27 @@ export const ContainerHeader = styled.header`
   width: 100%;
   top: 0;
   left: 0;
-  background-color: var(--black-800);
+  background-color: var(--blue-700);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.8rem;
+  padding: 0.4rem;
   z-index: 999;
   transition: background-color .4s, box-shadow 4s;
+
+  &[data-hide="visible"] {
+    top: 0;
+    transition: top 0.4s ease-out;
+  }
+
+  &[data-hide="hidden"] {
+    top: -80px;
+    transition: top 0.4s ease-out;
+  }
+
+  @media screen and (max-width: 860px) {
+    height: 70px;
+  }
 `;
 
 export const Nav = styled.nav`
@@ -39,13 +53,13 @@ export const Nav = styled.nav`
 export const NavMenu = styled.div<MenuProps>`
   @media screen and (max-width: 1150px) {
     position: fixed;
-    top: ${({ open }) => open ? '85px' : '-120%'};;
+    top: ${({ open }) => open ? '0' : '-120%'};;
     left: 0;
     background-color: var(--black-800);
     width: 100%;
     transition: top .8s;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 4rem;
+    padding-bottom: 1rem;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
   }
@@ -53,9 +67,9 @@ export const NavMenu = styled.div<MenuProps>`
 
 export const ImageWrapper = styled(Image)`
   object-fit: cover;
-  width: 4rem;
+  width: 3.2rem;
   height: auto;
-  border-radius: 0.8rem;
+  border-radius: .6rem;
 `;
 
 export const Ul = styled.ul`

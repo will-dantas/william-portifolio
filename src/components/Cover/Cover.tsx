@@ -8,9 +8,9 @@ import {
   ContatContainer,
   ContainerBlur,
   Font3d,
-  Div,
   ContentFont,
-  Paragraph
+  Paragraph,
+  H2
 } from "./Cover.styles";
 
 export const Cover = () => {
@@ -33,9 +33,9 @@ export const Cover = () => {
         animate="show"
       >
         <Content>
-          <Div variants={item}>
-            <h2>Prazer, sou o</h2>
-          </Div>
+          <H2 variants={item}>
+            Prazer, sou o
+          </H2>
           <ContentFont variants={item}>
             <Font3d>William</Font3d>
             <Font3d>Dantas</Font3d>

@@ -3,14 +3,34 @@
 import { useMenu } from "@/hooks/useMenu";
 import { BurguerMenu } from "../BurguerMenu/BurguerMenu";
 import { AncorLogo, ContainerHeader, ImageWrapper, Li, Nav, NavMenu, Ul } from "./Header.styles";
-import Logo from "../../../public/logo-wd.png"
+import Logo from "../../../public/logo-william.png"
 import { AnchorItem } from "../AnchorItem/AnchorItem";
+import { useEffect, useState } from "react";
 
 export const Header = () => {
   const { menuOpen } = useMenu();
+  const [position, setPosition] = useState(window.scrollY)
+  const [visible, setVisible] = useState(true) 
+  
+  useEffect(()=> {
+      const handleScroll = () => {
+         let moving = window.scrollY
+         
+         setVisible(position > moving);
+         setPosition(moving)
+      };
+
+      window.addEventListener("scroll", handleScroll);
+
+      return(() => {
+         window.removeEventListener("scroll", handleScroll);
+      })
+  })
+
+const cls = visible ? "visible" : "hidden";
 
   return (
-    <ContainerHeader>
+    <ContainerHeader data-hide={cls}>
       <Nav>
         <AncorLogo><ImageWrapper src={Logo} alt="Logo William Dantas" /></AncorLogo>
         <NavMenu open={menuOpen}>

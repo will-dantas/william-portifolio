@@ -1,7 +1,7 @@
 'use client'
 
 import { TiLocation } from "react-icons/ti";
-import Logo from "../../../public/logo-wd.png"
+import Logo from "../../../public/logo-william.png"
 import { Conteiner, Content, ContentCopyright, ContentInfo, Intersection, Link, LinksCard, Location, LogoImage, Name } from "./Footer.styles";
 import { MdEmail } from "react-icons/md";
 import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from "react-icons/ai";

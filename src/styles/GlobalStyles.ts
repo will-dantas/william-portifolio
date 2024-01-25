@@ -64,12 +64,11 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   h1, h2, h3 {
-    font-family: "Inter var", Inter, "Helvetica Neue", Arial, sans-serif;
     font-weight: 900;
+    font-style: normal;
   }
 
   p, textarea {
-    font-family: "Inter var", Inter, "Helvetica Neue", Arial, sans-serif;
     font-weight: 400;
     font-style: normal;
   }
