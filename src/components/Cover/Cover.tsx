@@ -1,30 +1,28 @@
 'use client'
 
-import { HiOutlineMail } from 'react-icons/hi';
-import { container, item, itemImage } from "./Cover.animate";
+import { container } from "./Cover.animate";
 import {
   Container,
   Content,
   ContatContainer,
   ContainerBlur,
-  Font3d,
-  ContentFont,
-  Paragraph,
-  H2
+  InsideBlack,
+  InsideIntroduce,
+  InsideRed,
+  InsideWhite,
+  ContatLink,
 } from "./Cover.styles";
+import Node from "../../../public/icons-tecs/nodejs-icon-logo-svgrepo-com.svg"
+import TypeScript from "../../../public/icons-tecs/typescript-official-svgrepo-com.svg"
+import ReactIcon from "../../../public/icons-tecs/react-svgrepo-com.svg"
+import Javascript from "../../../public/icons-tecs/javascript-svgrepo-com.svg"
+import GoogleGPC from "../../../public/icons-tecs/gcp-svgrepo-com.svg"
+import { ArrayLooper } from "./components/ArrayLooper";
+
 
 export const Cover = () => {
-  const windowScroll = () => {
-    const element: any = document.querySelector('#contact');
-
-    if (element !== null) {
-      window.scrollTo({
-        top: element?.offsetTop,
-        behavior: "smooth",
-      })
-    }
-  };
-
+  const food = [Node, TypeScript, ReactIcon, Javascript, GoogleGPC];
+    
   return (
     <Container>
       <ContainerBlur
@@ -33,17 +31,27 @@ export const Cover = () => {
         animate="show"
       >
         <Content>
-          <H2 variants={item}>
-            Prazer, sou o
-          </H2>
-          <ContentFont variants={item}>
-            <Font3d>William</Font3d>
-            <Font3d>Dantas</Font3d>
-          </ContentFont>
-          <Paragraph variants={item}>Desenvolvedor FullStack, busco contribuir como Densenvolvedor de Software <br /> em empresas que valorizam a inovação e organização.</Paragraph>
-          <ContatContainer variants={item} onClick={() => windowScroll()}>
-            <HiOutlineMail style={{ marginRight: "0.8rem", fontSize: "1.2rem" }} /> Contate-me
-          </ContatContainer>
+          <InsideBlack>
+            <h2>Ei! Bem Vindo!</h2>
+            <p>Sou William e Desenvolvedor de Software</p>
+          </InsideBlack>
+          <InsideIntroduce>
+          <InsideWhite>
+            <p>Conheça minhas habilidades</p>
+            <ArrayLooper elements={food} />
+          </InsideWhite>
+          <InsideRed>
+            <h3>Contato</h3>
+            <ContatContainer>
+              <ContatLink href="mailto:wmdantas2@gmail.com">
+                Email
+              </ContatLink>
+              <ContatLink href="https://www.linkedin.com/in/william-dantas/" target="_blank">
+                Linkedin
+              </ContatLink>
+            </ContatContainer>
+          </InsideRed>
+          </InsideIntroduce>
         </Content>
       </ContainerBlur>
     </Container>

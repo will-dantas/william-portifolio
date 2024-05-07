@@ -1,5 +1,7 @@
 'use client'
 
+import { Variants } from "framer-motion";
+
 export const container = {
   hidden: { opacity: 0 },
   show: {
@@ -27,3 +29,19 @@ export const itemImage = {
     transition: { duration: 2 }
   }
 }
+
+export const cardVariants: Variants = {
+  offscreen: {
+    y: 300
+  },
+  onscreen: {
+    y: 30,
+    rotate: -10,
+    transition: {
+      type: "spring",
+      bounce: 0.4,
+      duration: 3,
+      repeat: Infinity
+    }
+  }
+};
